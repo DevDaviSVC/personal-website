@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Estillizando o site */
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Começando a estilização do header */
+
+header {
+    padding: 20px 0;
+    background-color: #3B3936;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 400px;
+}
+
+nav.desktop-menu {
+    text-align: right;
+    width: calc(100% - 400px)
+}
+
+nav.desktop-menu ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav.desktop-menu li {
+    transition: 0.4s;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav.desktop-menu li:hover {
+    background-color: #e0ebec;
+}
+
+nav.desktop-menu li:hover a {
+    color: #3B3936;
+}
+
+nav.desktop-menu a {
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+/* Começando a estilização do main */
+
+/* Começando a estilização da sessão banner */
+
+section.banner {
+    min-height: 500px;
+    background-image: url("../images/image-banner.jpg");
+    background-attachment: fixed;
+    position: relative;
+}
+
+section.banner .texto-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+}
+
+/* Começando a estilização da sessão sobre */
+
+section.sobre {
+    padding: 60px 0;
+    background-color: #e0ebec;
+}
+
+.header-section {
+    padding-left: 10px;
+    border-left: 5px solid #889C9B;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+section.sobre .flex-container {
+    display: flex;
+    align-items: center;
+}
+
+section.sobre .image {
+    border-radius: 50%;;
+    height: 250px;
+    width: 250px;
+    background-image: url('../images/avatar.jpg');
+    background-size: 100% 100%;
+}
+
+section.sobre .texto-sobre {
+    width: calc(100% - 250px);
+    padding-left: 30px;
+    text-align: center;
+}
+
+/* Começando a estilização da sessão skills */
+
+section.skills {
+    padding: 50px 0;
+    background-color: rgb(230, 236, 235);
+}
+
+section.skills .flex-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.skill-single {
+    /* transition-duration: 0.5s;
+    transition-property: box-shadow; */
+    box-shadow: 0;
+    width: calc(100%  /3);
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.skill-single .image {
+    font-size: 80px;
+}
+
+.skill-single .texto {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Começando a estilização do footer */
+
+footer {
+    padding: 40px 0;
+    background-color: #2d2b29;
+    color: white;
+}
+
+footer .flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.social-section {
+    width: 50%;
+}
+
+.social-section h2 {
+    margin-bottom: 20px;
+    border-left: 5px solid #B2BEBF;
+    padding-left: 10px;
+}
+
+.social-section li {
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.texto-footer {
+    width: 50%;
+    text-align: center;
+}
+
+.social-section ul {
+    list-style-type: none;
+}
+
+.social-section a {
+    color: rgb(230, 229, 229);
+    text-decoration: none;
+}
+
+/*****************************/
+
+/* Começando a estilização da página hobbies */
+
+section.hobbies {
+    padding: 40px 0;
+}
+
+div.hobbies-cards .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-single-wraper {
+    width: 33.3%;
+    padding: 20px;
+    height: 400px;
+}
+
+.card-single {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #2d2b29;
+    border-radius: 20px;
+}
+
+.card-single .texto-card-single-front {
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-shadow: 0 0 10px black;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.card-single .card-single-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card-single-back .texto-back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.card-single:hover .texto-card-single-front {
+    opacity: 0;
+}
+
+.card-single:hover .card-single-back {
+    opacity: 1;
+}
+
+/*****************************/
+
+/* Iniciando estilização da página filmes */
+
+/****************************/
+
+/* Iniciando a estilização de sessão filmes */
+
+section.filmes {
+    padding: 20px 0;
+}
+
+.filme-single {
+    width: 100%;
+      padding: 20px 0;
+}
+
+.filme-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filme-wraper-invert {
+    flex-direction: row-reverse;
+}
+
+.filme-wraper-invert .filme-desc {
+    text-align: left;
+}
+
+.filme-img {
+    width: 60%;
+    height: 300px;
+}
+
+.filme-img iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.filme-desc {
+    text-align: right;
+    width: 40%;
+    padding: 0 20px;
+    line-height: 25px;
+}
+
+/*****************************/
+
+/* Iniciando estilização da página projetos */
+
+/****************************/
+
+/* Iniciando a estilização da sessão projetos */
+
+section.projetos {
+    padding: 20px 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projeto-single {
+    width: 50%;
+    padding: 20px;
+}
+
+.projeto-wraper {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.projeto-img {
+    width: 100%;
+    height: 200px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+/*    background-image: url(); colocar depois*/
+}
+
+.projeto-desc {
+    width: 100%;
+    text-align: center;
+}
+
+.projeto-desc h2 {
+    margin-bottom: 10px;
+}
+
+/* Começando a aplicar o responsivo com media queries */
+
+@media screen and (max-width: 768px) {
+    footer .social-section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    footer .social-section h2 {
+        border-left: 0;
+    }
+
+    footer .texto-footer {
+        width: 100%;
+    }
+}
