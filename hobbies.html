@@ -25,7 +25,7 @@
 
         <header>
             <div class="container">
-                <h2 class="logo">Site pessoal - Davi Souza</h2>
+                <h2 class="logo"><a href="/">Davi Souza</a></h2>
                 <nav class="desktop-menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -34,6 +34,15 @@
                         <li><a href="projetos.html">Projetos</a></li>
                     </ul>
                 </nav><!-- desktop-menu -->
+                <nav class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="filmes.html">Filmes</a></li>
+                        <li><a href="hobbies.html">Hobbies</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                    </ul>
+                </nav><!-- mobile-menu -->
             </div><!-- container -->
         </header>
 
@@ -49,57 +58,51 @@
                         <div class="flex-container">
 
                             <div class="card-single-wraper">
-                                <div class="card-single" style="background-image: url(images/chess-image.jpg); background-position: center; background-size: cover">
+                                <div class="card-single" style="background-image: url(images/programming-image.jpg);">
+                                    <div class="texto-card-single-front">Programação</div>
+                                    <div class="card-single-back">
+                                    </div><!-- card-single-back -->
+                                </div><!-- card-single-->
+                            </div><!-- card-single-wraper -->
+
+                            <div class="card-single-wraper">
+                                <div class="card-single" style="background-image: url(images/acoustic-guitar-image.jpg);">
+                                    <div class="texto-card-single-front">Violão</div>
+                                    <div class="card-single-back">
+                                    </div><!-- card-single-back -->
+                                </div><!-- card-single-->
+                            </div><!-- card-single-wraper -->
+
+                            <div class="card-single-wraper">
+                                <div class="card-single" style="background-image: url(images/chess-image.jpg);">
                                     <div class="texto-card-single-front">Xadrez</div>
                                     <div class="card-single-back">
-                                        <div class="texto-back">Chess is an open world for ditator enthuastics</div>
                                     </div><!-- card-single-back -->
                                 </div><!-- card-single-->
                                 
                             </div><!-- card-single-wraper -->
 
                             <div class="card-single-wraper">
-                                <div class="card-single" style="background-image: url(images/acoustic-guitar-image.jpg); background-position: center; background-size: cover">
-                                    <div class="texto-card-single-front">Violão</div>
+                                <div class="card-single" style="background-image: url(images/workout-image.jpg);">
+                                    <div class="texto-card-single-front">Treinar</div>
                                     <div class="card-single-back">
-                                        <div class="texto-back">Chess is an open world for ditator enthuastics</div>
-                                    </div><!-- card-single-back -->
-                                </div><!-- card-single-->
-                            </div><!-- card-single-wraper -->
-
-                            <div class="card-single-wraper">
-                                <div class="card-single">
-                                    <div class="texto-card-single-front">Xadrez</div>
-                                    <div class="card-single-back">
-                                        <div class="texto-back">Chess is an open world for ditator enthuastics</div>
-                                    </div><!-- card-single-back -->
-                                </div><!-- card-single-->
-                            </div><!-- card-single-wraper -->
-
-                            <div class="card-single-wraper">
-                                <div class="card-single" style="background-image: url(images/chess-image.jpg); background-position: center; background-size: cover">
-                                    <div class="texto-card-single-front">Xadrez</div>
-                                    <div class="card-single-back">
-                                        <div class="texto-back">Chess is an open world for ditator enthuastics</div>
                                     </div><!-- card-single-back -->
                                 </div><!-- card-single-->
                                 
                             </div><!-- card-single-wraper -->
 
                             <div class="card-single-wraper">
-                                <div class="card-single" style="background-image: url(images/acoustic-guitar-image.jpg); background-position: center; background-size: cover">
-                                    <div class="texto-card-single-front">Violão</div>
+                                <div class="card-single" style="background-image: url(images/reading-image.jpg);">
+                                    <div class="texto-card-single-front">Leitura</div>
                                     <div class="card-single-back">
-                                        <div class="texto-back">Chess is an open world for ditator enthuastics</div>
                                     </div><!-- card-single-back -->
                                 </div><!-- card-single-->
                             </div><!-- card-single-wraper -->
 
                             <div class="card-single-wraper">
-                                <div class="card-single">
-                                    <div class="texto-card-single-front">Xadrez</div>
+                                <div class="card-single" style="background-image: url(images/math-image.jpg);">
+                                    <div class="texto-card-single-front">Matemática</div>
                                     <div class="card-single-back">
-                                        <div class="texto-back">Chess is an open world for ditator enthuastics</div>
                                     </div><!-- card-single-back -->
                                 </div><!-- card-single-->
                             </div><!-- card-single-wraper -->
@@ -116,8 +119,8 @@
                     <div class="social-section">
                         <h2>Conheça minhas redes sociais</h2>
                         <ul>
-                            <li><a href=""><i class="fab fa-instagram"></i> itsdavisouza</a></li>
-                            <li><a href="https://github.com/DevDaviSVC"><i class="fab fa-github"></i> DevDaviSVC</a></li>
+                            <li><a href="https://www.instagram.com/itsdavisouza/" target="_blank"><i class="fab fa-instagram"></i> itsdavisouza</a></li>
+                            <li><a href="https://github.com/DevDaviSVC" target="_blank"><i class="fab fa-github"></i> DevDaviSVC</a></li>
                         </ul>
                     </div><!-- social-section -->
 
@@ -128,6 +131,9 @@
             </div><!-- container -->
         </footer>
         
+         <!-- Arquivos JS -->
+         <script src="js/mobileMenu.js"></script>
+
     </body>
 
 </html>

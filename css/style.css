@@ -12,9 +12,9 @@ html, body {
 /* Estillizando o site */
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     width: 100%;
-    padding: 0 2%;
+    padding: 0 3%;
     margin: 0 auto;
 }
 
@@ -25,9 +25,14 @@ html, body {
 /* Começando a estilização do header */
 
 header {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 20px 0;
     background-color: #3B3936;
     color: white;
+    width: 100%;
 }
 
 header .container {
@@ -36,7 +41,13 @@ header .container {
 }
 
 .logo {
+    font-size: 28px;
     width: 400px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
 }
 
 nav.desktop-menu {
@@ -70,7 +81,52 @@ nav.desktop-menu a {
     color: white;
 }
 
+nav.mobile-menu {
+    text-align: right;
+    display: none;
+    width: calc(100% - 400px);
+}
+
+nav.mobile-menu > i {
+    font-size: 32px;
+}
+
+nav.mobile-menu > ul {
+    position: absolute;
+    background-color: #3B3936;
+    z-index: 999;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    opacity: 0;
+    transition: opacity ease 0.5s, top ease 0.5s;
+    display: none;
+}
+
+nav.mobile-menu > ul li {
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+nav.mobile-menu > ul li a {
+    display: inline-block;
+    padding: 15px 0;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+}
+
+nav.mobile-menu > ul li:hover, nav.mobile-menu > ul li:active {
+    background-color: #302e2c;
+}
+
 /* Começando a estilização do main */
+
+main {
+    margin-top: 60px;
+}
 
 /* Começando a estilização da sessão banner */
 
@@ -88,6 +144,7 @@ section.banner .texto-banner {
     transform: translate(-50%, -50%);
     font-size: 30px;
     color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Começando a estilização da sessão sobre */
@@ -121,6 +178,7 @@ section.sobre .texto-sobre {
     width: calc(100% - 250px);
     padding-left: 30px;
     text-align: center;
+    font-size: 18px;
 }
 
 /* Começando a estilização da sessão skills */
@@ -138,13 +196,15 @@ section.skills .flex-container {
 }
 
 .skill-single {
-    /* transition-duration: 0.5s;
-    transition-property: box-shadow; */
+    transition: box-shadow 0.3s;
     box-shadow: 0;
     width: calc(100%  /3);
-    margin-bottom: 10px;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
+}
+
+.skill-single:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .skill-single .image {
@@ -195,7 +255,13 @@ footer .flex-container {
 }
 
 .social-section a {
+    transition: color 0.3s;
     color: rgb(230, 229, 229);
+    text-decoration: none;
+}
+
+.social-section a:hover {
+    color: rgb(196, 196, 196);
     text-decoration: none;
 }
 
@@ -219,6 +285,8 @@ div.hobbies-cards .flex-container {
 }
 
 .card-single {
+    background-position: center; 
+    background-size: cover;
     position: relative;
     width: 100%;
     height: 100%;
@@ -237,6 +305,7 @@ div.hobbies-cards .flex-container {
     font-size: 20px;
     font-weight: bold;
     transition: 0.5s;
+    z-index: 2;
 }
 
 .card-single .card-single-back {
@@ -249,21 +318,7 @@ div.hobbies-cards .flex-container {
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
     transition: 0.5s;
-}
-
-.card-single-back .texto-back {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 20px;
-    width: 80%;
-    text-align: center;
-}
-
-.card-single:hover .texto-card-single-front {
-    opacity: 0;
+    z-index: 1;
 }
 
 .card-single:hover .card-single-back {
@@ -284,7 +339,7 @@ section.filmes {
 
 .filme-single {
     width: 100%;
-      padding: 20px 0;
+    padding: 20px 0;
 }
 
 .filme-wraper {
@@ -327,7 +382,7 @@ section.filmes {
 /* Iniciando a estilização da sessão projetos */
 
 section.projetos {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .flex-container {
@@ -338,6 +393,8 @@ section.projetos {
 .projeto-single {
     width: 50%;
     padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .projeto-wraper {
@@ -346,26 +403,48 @@ section.projetos {
     flex-wrap: wrap;
 }
 
+.projeto-wraper h2 {
+    font-size: 35px;
+}
+
 .projeto-img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     width: 100%;
-    height: 200px;
+    height: 250px;
     background-color: #ccc;
     margin-bottom: 20px;
 /*    background-image: url(); colocar depois*/
+    background-size: cover;
+    background-position: center;
+}
+
+.projeto-img a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .projeto-desc {
-    width: 100%;
+    width: 80%;
     text-align: center;
+    margin: 0 auto;
 }
 
 .projeto-desc h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Começando a aplicar o responsivo com media queries */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
+    header nav.desktop-menu {
+        display: none;
+    }
+
+    header nav.mobile-menu{
+        display: block;
+    }
+
     footer .social-section {
         width: 100%;
         text-align: center;
@@ -378,5 +457,62 @@ section.projetos {
 
     footer .texto-footer {
         width: 100%;
+    }
+
+    section.banner .texto-banner {
+        text-align: center;
+        width: 98%;
+    }
+
+    section.sobre .image {
+        height: 250px;
+        width: 250px;
+        background-image: url('../images/avatar.jpg');
+        background-size: 100% 100%;
+        margin: 0 auto;
+    }
+    
+    section.sobre .texto-sobre {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .projeto-single {
+        width: 100%;
+    }
+
+    .projeto-img {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .filme-desc, .filme-wraper-invert .filme-desc {
+        margin-top: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .filme-img {
+        width: 90%;
+        height: 400px;
+        margin: 0 auto;
+    }
+    
+    .filme-img iframe {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skill-single {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .card-single-wraper {
+        width: 50%;
     }
 }
