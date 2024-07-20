@@ -42,7 +42,7 @@ header .container {
 
 .logo {
     font-size: 28px;
-    width: 400px;
+    width: 170px;
 }
 
 .logo a {
@@ -52,7 +52,7 @@ header .container {
 
 nav.desktop-menu {
     text-align: right;
-    width: calc(100% - 400px)
+    width: calc(100% - 170px)
 }
 
 nav.desktop-menu ul {
@@ -84,7 +84,7 @@ nav.desktop-menu a {
 nav.mobile-menu {
     text-align: right;
     display: none;
-    width: calc(100% - 400px);
+    width: calc(100% - 170px);
 }
 
 nav.mobile-menu > i {
@@ -410,7 +410,7 @@ section.projetos {
 .projeto-img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     width: 100%;
-    height: 250px;
+    padding-top: 60%;
     background-color: #ccc;
     margin-bottom: 20px;
 /*    background-image: url(); colocar depois*/
@@ -453,10 +453,16 @@ section.projetos {
 
     footer .social-section h2 {
         border-left: 0;
+        padding-left: 0;
     }
 
     footer .texto-footer {
         width: 100%;
+    }
+
+    .social-section li {
+        margin-left: 0px;
+        margin-bottom: 5px;
     }
 
     section.banner .texto-banner {
@@ -475,14 +481,11 @@ section.projetos {
     section.sobre .texto-sobre {
         width: 100%;
         margin-top: 40px;
+        padding-left: 0;
     }
 
     .projeto-single {
         width: 100%;
-    }
-
-    .projeto-img {
-        height: 400px;
     }
 }
 
@@ -495,7 +498,7 @@ section.projetos {
 
     .filme-img {
         width: 90%;
-        height: 400px;
+        height: 200px;
         margin: 0 auto;
     }
     
@@ -508,11 +511,22 @@ section.projetos {
 
 @media screen and (max-width: 768px) {
     .skill-single {
-        width: 50%;
+        width: 100%;
         margin-bottom: 30px;
     }
 
     .card-single-wraper {
         width: 50%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .skill-single {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .card-single-wraper {
+        width: 100%;
     }
 }
