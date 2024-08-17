@@ -537,6 +537,18 @@ section.projetos .header-section {
         width: 100%;
     }
 
+    section.sobre {
+        padding: 7.2rem 0;
+    }
+
+    section.sobre > .container {
+        position: static;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+        width: 100%;
+    }
+
     section.skills .header-section {
         font-size: 2.2rem;
     }
